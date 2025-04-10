@@ -24,5 +24,4 @@ def main():
     traverse(a)
 
 if __name__ == "__main__":
-    print("hi")
     main()
