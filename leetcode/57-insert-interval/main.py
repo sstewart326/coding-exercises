@@ -10,6 +10,8 @@ from typing import List
 # Output: [[1,2],[3,10],[12,16]]
 # Explanation: Because the new interval [4,8] overlaps with [3,5],[6,7],[8,10].
 #
+# time - O(n) - traversing through the intervals. each interval is only of size 2 so we are not nesting loop thus not n*m
+# space - O(n) - persisting those intervals into a new list
 class Solution:
     def insert(self, intervals: List[List[int]], newInterval: List[int]) -> List[List[int]]:
         # if newInterval < interval[i], append newInterval + interval[i:]

@@ -3,7 +3,7 @@ from typing import List
 
 class Solution:
 
-    def flip_colors_stack(self, image, row, column, starting_color, new_color, visited):
+    def flip_colors_bfs(self, image, row, column, starting_color, new_color, visited):
 
         queue = [ (row, column) ]
 
@@ -34,7 +34,7 @@ class Solution:
         starting_color = image[sr][sc]
         if starting_color == color:
             return image
-        return self.flip_colors_stack(image, sr, sc, starting_color, color, set())
+        return self.flip_colors_bfs(image, sr, sc, starting_color, color, set())
 
 
 
